@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="{% static 'css/todostyle.css' %}">
+    <!-- <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="{% url 'home' %}" class="pull-left">Home</a></h1>
+    <div class="wrapper">
+        <div class="header">
+            <h1><i class="fa fa-list-alt" aria-hidden="true"></i> Todo List App</h1>
+        </div>
+        <div class="list">
+            <ul>
+                <li><input type="checkbox" name="" id=""><label for="">Python</label></li>
+                <li class="gray"><input type="checkbox" name="" id=""><label for="">HTML</label></li>
+                <li><input type="checkbox" name="" id=""><label for="">CSS</label></li>
+                <li class="gray"><input type="checkbox" name="" id=""><label for="">Terminal</label></li>
+                <li><input type="checkbox" name="" id=""><label for="">Bash Script</label></li>
+                <li class="gray"><input type="checkbox" name="" id=""><label for="">Javascript</label></li>
+                <li><input type="checkbox" name="" id=""><label for="">Django</label></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

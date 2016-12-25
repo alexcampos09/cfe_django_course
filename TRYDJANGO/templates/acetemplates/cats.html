@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cats</title>
+    <link rel="stylesheet" href="{% static 'css/parallaxstyle.css' %}">
+    <link href="{% static 'css/parallaxstyle.css' %} " rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{% static 'js/parallax.js' %}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div data-parallax="scroll" data-image-src="{% static 'img/cat.jpeg' %}">
+       <ul>
+            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="#">Cats</a></li>
+            <li class="righty"><a href="{% url 'contact' %}">Contact</a></li>
+            <li class="righty"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        </ul>
+        <br>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab libero similique, pariatur officiis quidem mollitia molestias.</p>
+    </div>
+    <div data-parallax="scroll" data-image-src="{% static 'img/kitty.jpeg' %}">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab libero similique, pariatur officiis quidem mollitia molestias.</p>
+    </div>
+    <div data-parallax="scroll" data-image-src="{% static 'img/cool.jpeg' %}">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam enim molestias ratione, dignissimos deleniti hic consectetur quasi officia totam tempora, quia esse necessitatibus nihil deserunt perspiciatis dolores eligendi sed. Nihil, accusamus, et.</p>
+    </div>
+    <div data-parallax="scroll" data-image-src="{% static 'img/dreamer.jpeg' %}">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam enim molestias ratione, dignissimos deleniti hic consectetur quasi officia totam tempora, quia esse necessitatibus nihil deserunt perspiciatis dolores eligendi sed. Nihil, accusamus, et.</p>
+    </div>
+</body>
+</html>

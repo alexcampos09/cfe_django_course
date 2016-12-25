@@ -1,0 +1,28 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FitoFit Gym | Comming Soon</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/gymstyle.css' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.thegymboys.com/wp-content/uploads/2015/07/favicon1_150_150.png">
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <div id="reddish">
+        <h1><i class="fa fa-superpowers" aria-hidden="true" font-size: 2em></i>Fito Fit Gym</h1>
+        <p>Your new gym coming soon!</p>
+        <button id="click">Call us! 05018-001</button>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+    height: 100%;
+}
+
+video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50%;
+    margin-left: -50%;
+    z-index: 1;
+}
+
+#text{
+    z-index: 2;
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    background: gray;
+    opacity: 0.8;
+    border-radius: 25px;
+    padding: 12px 48px;
+}
+
+h1 {
+    color: saddlebrown;
+    font-size: 3em;
+    font-family: sans-serif;
+}
+
+p{
+    color:salmon;
+    font-size: 1.5em;
+    font-family: fantasy
+}
+
+#links{
+    color: rgb(255,60,100);
+    font-size: 3em;
+    font-family:sans-serif;
+    display: inline-block;
+    padding: 12px 48px;
+    border: solid 4px;
+
+}

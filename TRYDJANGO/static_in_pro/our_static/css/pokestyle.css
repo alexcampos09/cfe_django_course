@@ -1,0 +1,83 @@
+
+body{
+    padding-bottom:20px;
+}
+
+#navbar-wrapper{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 20;
+}
+
+#navbar-wrapper .container .navbar{
+    width:auto;
+}
+
+#carousel{
+    height:650px;
+    margin-bottom:50px;
+}
+
+#carousel .item{
+    height: 650px;
+    margin-bottom:50px;
+}
+
+#carousel img{
+    height:650px;
+    position:absolute;
+    min-width: 100%;
+    top:0;
+    left:0;
+}
+
+.carousel-caption{
+    margin-bottom:10px;
+}
+
+
+#poke_trainers .col-md-4{
+    text-align: center;
+}
+
+#poke_trainers h2{
+    color:rgba(50,50,50,0.8);
+}
+    
+
+#poke_trainers p{
+    margin:0 10px 20px 10px;
+}
+
+#poke_trainers img{
+    height:140px;
+    width:140px;
+    margin-top: 20px;
+}
+
+#poke_trainers{
+    padding: 20px;
+}
+
+.divider{
+    margin: 40px 0 0 0;
+}
+
+#content img{
+    height:400px;
+    border-radius:50px;
+}
+
+#content{
+    text-align: center;
+}
+
+#content .line{
+    padding:20px
+}
+
+.texts{
+    padding-top:100px
+}

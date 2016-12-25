@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+{% block head_title %} Welcome | {{ block.super }}{% endblock %}
+
+<style>
+    {% block style %}
+        .text-align-center{
+            text-align: center;
+        }
+
+        .jumbotron{
+            background-color: #0C4B33;
+            color:white;
+            height:400px;
+        }
+
+        .navbar-static-top {
+            margin-bottom: 0px;
+        }
+    {% endblock %}
+</style>
+
+
+
+
+{% block jumbotron %}
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+            <!-- Main component for a primary marketing message or call to action -->
+
+                <div class="col-sm-6">
+                    <h1>Try Django 1.8</h1>
+                    <p>Django é um completo tarantinesco filme, têm ação, suspense, amor, humor e etc. Ich glaube, dass Tarantino sein eigenes Straße in Lüneburg verdient: Tarantinstraße!</p>
+                    <p>
+                        <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Join Us &raquo;</a>
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eUdM9vrCbow" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    {% if request.user.is_authenticated %}
+
+        <h1>You're logged in!</h1>
+        {% if queryset %}
+
+            <h2>Welcome Staff</h2>
+            <table class="table table-striped table-hover">
+            {% for instance in queryset %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ instance.full_name }}</td>
+                    <td>{{ instance }}</td>
+                    <td>{{ instance.timestamp|timesince }} ago</td>
+                </tr>
+            {% endfor %}
+            </table>
+
+        {% endif %}
+
+
+    {% else %}
+
+
+
+    <div class="row">
+        <div class="col-xs-3 pull-right">
+
+                <p class="lead text-align-center">{{ title }}</h1>
+                <form action="" method="POST">{% csrf_token %}
+                    {{ form|crispy }}
+                    <input type="submit" value="SignUP" class="btn btn-primary">
+                </form>
+
+
+
+        </div>
+        <div class="col-xs-3">
+            <p class="lead text-align-center">Django &amp; Bootstrap</p>
+            <img src="{% static 'img/Django_sunglasses.jpg' %}" alt="Stay cool, folks!" class="img-responsive">
+        </div>
+        <div class="col-xs-3">
+            <p class="lead text-align-center">For Stars &amp; Starters<br><br>
+                <span class="fa-stack fa-lg fa-5x">
+                    <i class="fa fa-star-o fa-stack-2x" aria-hidden="true"></i>
+                    <i style="color:yellow" class="fa fa-bolt fa-stack-1x fa-spin" aria-hidden="true"></i>
+                </span>
+
+            </p>
+
+        </div>
+            <div class="col-xs-3">
+                <p class="lead text-align-center">Always Open Source<br><br>
+                    <span class="fa-stack fa-lg fa-5x responsive">
+                        <i class="fa fa-circle-o-notch fa-stack-2x" aria-hidden="true"></i>
+                        <i class="fa fa-github fa-stack-1x" aria-hidden="true"></i>
+                    </span>
+
+            </p>
+        </div>
+    </div>
+
+    {% endif %}
+
+{% endblock %}
